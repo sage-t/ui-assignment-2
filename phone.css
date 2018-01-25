@@ -1,0 +1,54 @@
+
+#tab-bar {
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+}
+
+#tab-bar button {
+    width: 30%;
+}
+
+.active-tab {
+    /* border-bottom: 5px solid red; */
+    background-color: gray;
+}
+
+.dialer-table tr td button {
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 90px;
+}
+
+.dialer-button {
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 36%;
+}
+
+#content-list button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#content-form form button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#content-form form label {
+    margin-top: 10px;
+}
+
+#content-form form input {
+    width: 70%;
+}
+
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 400px;
+}
+
+/* #content div {
+    width: 500px;
+} */

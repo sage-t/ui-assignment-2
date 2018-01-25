@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Assignment 1</title>
+
+        <!-- Pure CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="phone.css">
+    </head>
+    <body>
+        <div id="tab-bar">
+            <button id="dialer-button" class="pure-button active-tab">Dialer</button>
+            <button id="list-button" class="pure-button">Contact List</button>
+            <button id="form-button" class="pure-button">Add Contact</button>
+        </div>
+        <div id="content">
+            <div id="content-dialer">
+                <h2>Dialer</h2>
+                <form class="pure-form">
+                    <input type="tel" style="width: 78%" placeholder="Phone number">
+                    <table class="dialer-table">
+                        <tr>
+                            <td><button type="button" class="pure-button">1</button></td>
+                            <td><button type="button" class="pure-button">2</button></td>
+                            <td><button type="button" class="pure-button">3</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="pure-button">4</button></td>
+                            <td><button type="button" class="pure-button">5</button></td>
+                            <td><button type="button" class="pure-button">6</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="pure-button">7</button></td>
+                            <td><button type="button" class="pure-button">8</button></td>
+                            <td><button type="button" class="pure-button">9</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="pure-button">*</button></td>
+                            <td><button type="button" class="pure-button">0</button></td>
+                            <td><button type="button" class="pure-button">#</button></td>
+                        </tr>
+                    </table>
+
+                    <button type="button" class="pure-button dialer-button">Dial</button>
+                    <button type="button" class="pure-button dialer-button">Clear</button>
+                </form>
+            </div>
+            <div id="content-list">
+                <h2>Contact List</h2>
+                
+                <button class="pure-button">Chris Stapleton</button>
+                <button class="pure-button">Jason Aldean</button>
+                <button class="pure-button">Hank Williams</button>
+                <button class="pure-button">Hank Williams Jr.</button>
+                <button class="pure-button">Johnny Cash</button>
+            </div>
+            <div id="content-form">
+                <h2>Add Contact</h2>
+                <form class="pure-form pure-form-stacked">
+                    <label for="contact-name">Name</label>
+                    <input id="contact-name" type="text" placeholder="Jaden Smith">
+                    
+                    <label for="contact-phone">Phone Number</label>
+                    <input id="contact-phone" type="tel" placeholder="123-456-7890">
+                    
+                    <label for="contact-email">Email Address</label>
+                    <input id="contact-email" type="email" placeholder="jaden.smith@colorado.edu">
+                    
+                    <button type="button" class="pure-button">Add Contact</button>
+                    <button type="button" class="pure-button">Clear</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="phone.js"></script>
+    </body>
+</html>
