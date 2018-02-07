@@ -5,7 +5,20 @@
 }
 
 #tab-bar button {
-    width: 30%;
+    width: 24%;
+}
+
+.lightgray {
+    background: lightgray;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.text-center {
+    text-align: center;
+    vertical-align: middle;
 }
 
 .active-tab {
@@ -30,6 +43,10 @@
     margin-right: 10px;
 }
 
+#content {
+    width: 400px;
+}
+
 #content-form form button {
     margin-top: 10px;
     margin-right: 10px;
@@ -46,7 +63,7 @@
 body {
     padding-left: 20px;
     padding-right: 20px;
-    width: 400px;
+    width: 550px;
 }
 
 /* #content div {
