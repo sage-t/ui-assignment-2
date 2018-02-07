@@ -24,6 +24,12 @@ function tabCallback(tab_id, content_id) {
     }
 }
 
+function gestureCallback(message) {
+    return function () {
+        $("#gesture_output").text(message);
+    }
+}
+
 $(document).ready(function() {
     hideAll();
     show("#content-dialer", "#dialer-button");
@@ -46,7 +52,8 @@ $(document).ready(function() {
 
 
     // setup gesture area
-
+    $("#gesture_area").mousedown(gestureCallback("mouse down"));
+    $("#gesture_area").mouseup(gestureCallback("mouse up"));
 
 });
 
