@@ -24,15 +24,36 @@ function tabCallback(tab_id, content_id) {
     }
 }
 
-function gestureCallback(message) {
-    return function () {
-        $("#gesture_output").text(message);
+// function gestureCallback(message) {
+//     return function () {
+//         $("#gesture_output").text(message);
+//     }
+// }
+
+var downX = 0, downY = 0;
+function mouseDownHandler(event) {
+    $("#gesture_output").text("mouse down");
+    downX = event.pageX;
+    downY = event.pageY;
+}
+
+function mouseUpHandler(event) {
+    var dx = event.pageX - downX;
+    var dy = event.pageY - downY;
+
+    if (dx == 0 && dy == 0) {
+        $("#gesture_output").text("mouse up");
+    } else if (Math.abs(dx) > Math.abs(dy)) {
+        $("#gesture_output").text("swipe " + (dx > 0 ? "right" : "left"));
+    } else {
+        $("#gesture_output").text("swipe " + (dy > 0 ? "down" : "up"));
     }
 }
 
 $(document).ready(function() {
     hideAll();
     show("#content-dialer", "#dialer-button");
+
 
     // setup dialer buttons
     for(let i = 0; i < 10; i++) { $('#b-' + i).click(dialerCallback(i)); }
@@ -48,8 +69,8 @@ $(document).ready(function() {
 
 
     // setup gesture area
-    $("#gesture_area").mousedown(gestureCallback("mouse down"));
-    $("#gesture_area").mouseup(gestureCallback("mouse up"));
+    $("#gesture_area").mousedown(mouseDownHandler);
+    $("#gesture_area").mouseup(mouseUpHandler);
 
 });
 
